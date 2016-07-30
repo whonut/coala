@@ -43,6 +43,7 @@ Welcome to the coala documentation!
    Writing Bears <Users/Tutorials/Writing_Bears>
    Testing Bears <Users/Tutorials/Testing_Bears>
    Linter Bears <Users/Tutorials/Linter_Bears>
+   Linter Bears - Advanced <Users/Tutorials/Linter_Bears_Advanced>
    Git Help <Users/Tutorials/Git_Help>
 
 .. toctree::
