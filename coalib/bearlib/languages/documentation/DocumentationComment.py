@@ -205,3 +205,17 @@ class DocumentationComment:
 
         return DocumentationComment(assembled_doc, docstyle_definition, indent,
                                     marker, range)
+
+    def assemble(self):
+        """
+        Assembles parsed documentation to the original documentation.
+
+        This function assembles the whole documentation comment, with the
+        given markers and indentation.
+        """
+        lines = self.documentation.splitlines(keepends=True)
+        assembled = self.indent + self.marker[0]
+        assembled += ''.join('\n' if line == '\n' and not self.marker[1]
+                             else self.indent + self.marker[1] + line
+                             for line in lines)
+        return assembled + self.indent + self.marker[2]

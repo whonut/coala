@@ -190,3 +190,6 @@ class AssembledDocumentationTest(unittest.TestCase):
                           for doc in parsed_docs]
 
         self.assertEqual([str(doc) for doc in assembled_docs], original)
+
+        for assembled_doc in assembled_docs:
+            self.assertIn(assembled_doc.assemble(), "".join(data))
