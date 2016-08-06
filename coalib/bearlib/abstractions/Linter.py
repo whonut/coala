@@ -426,7 +426,7 @@ def _create_linter(klass, options):
                                                      options["output_format"]))
 
             if options["output_format"] == "corrected":
-                process_output_args = {
+                _process_output_args = {
                     key: options[key]
                     for key in ("result_message", "diff_severity",
                                 "diff_distance")
@@ -438,7 +438,7 @@ def _create_linter(klass, options):
             else:
                 assert options["output_format"] == "regex"
 
-                process_output_args = {
+                _process_output_args = {
                     key: options[key]
                     for key in ("output_regex", "severity_map",
                                 "result_message")
